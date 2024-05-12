@@ -1,0 +1,9 @@
+# arsenals sepolicy
+# read fps
+allow platform_app vendor_sysfs_graphics:file { read open };
+# read battery info
+allow platform_app vendor_sysfs_battery_supply:dir { search };
+allow platform_app vendor_sysfs_battery_supply:file { read open getattr };
+# read gpu info
+allow platform_app vendor_sysfs_kgsl:file { read open getattr };
+allow platform_app vendor_sysfs_kgsl_gpuclk:file { read open getattr };
